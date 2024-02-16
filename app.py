@@ -8,7 +8,7 @@ app = Flask(__name__)
 def main_stock():
 
     if request.method == 'POST':
-        if(inputs == None):
+        if(request.form.get('input')  == None):
             return render_template('index.html')
     
         inputs = str(request.form['input'])
